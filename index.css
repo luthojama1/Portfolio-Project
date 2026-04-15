@@ -4,16 +4,45 @@
     box-sizing: border-box;
 }
 
+body{
+    line-height: 1.5;
+}
+
 /* Header Content */
 
 .header{
     display: flex;
     justify-content: space-between;
-    padding: 1em 2em;
+    padding: 1.5em;
 }
 
 /* Main content */
 
+/* Hero Section Heading */
+
 .hero-section{
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+}
+
+.hero-section-headings{
+    line-height: 1.3;
+}
+
+.hero-section-headings h1{
+   font-size: clamp(2rem, 6vw, 4.5rem);
+    margin-bottom: 0.3em;
+}
+
+.hero-section-headings h2{
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    margin-bottom: 0.5em;
+}
+
+.hero-section-headings h3{
+   font-size: clamp(1rem, 2vw, 2.5rem);
 }
