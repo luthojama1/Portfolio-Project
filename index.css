@@ -46,3 +46,27 @@ body{
 .hero-section-headings h3{
    font-size: clamp(1rem, 2vw, 2.5rem);
 }
+
+/* Hero section buttons */
+
+.hero-content-buttons button{
+    padding: .8em;
+    margin-top: 2em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.tool-box{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    max-width: 60%;
+    margin-top: 2em;
+}
+
+.tool-box .tool{
+    border: 1px solid #303030;
+    border-radius: 50%;
+    padding: .5em;
+}
