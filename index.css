@@ -5,8 +5,11 @@
 }
 
 :root{
+    /*FONT---COLOR*/
+    --font-clr:#e4dbdb;;
+
     /* BACKGROUND-COLOR */
-    --bg-clr: radial-gradient(circle at bottom, #0b1d3a, #020617 70%);
+    --bg-clr: #010917;
 
     /* BACKGROUND--GLASS-EFFECT */
         --bg-glss--background: #0a193c66;
@@ -24,40 +27,90 @@ body{
     font-family: Montserrat;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* h2--Headings--Style */
 .heading{
     font-size: clamp(1.5rem, 4vw, 3rem);
     text-align: center;
 }
 
+/*---Quotes---*/
+
+.quote{
+    font-size: clamp(1rem, 2vw, 2.4rem);
+    margin: 2em auto;
+    max-width: 23ch;
+}
+
 
 /* HERO---SIZE--STYLE */
-.hero-section, .about-section, .contact-section, .education-section{
+.hero-section, #about_section, .contact-section, #education_section{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     padding: 2em;
 }
-
 
 /* HEADER---CONTENT---STLE */
 .header{
     display: flex;
     justify-content: space-between;
     padding: 1.5em;
+    background-color: var(--bg-clr);
 }
+
+/*---LOGO---*/
+
 .logo .mobile_menu{
     display: none;
 }
+.logo strong{
+    font-size: 2rem;
+    color: var(--font-clr);
+}
+
+/*---LINKS---*/
 
 .nav-menu .links{
+    position: relative;
     display: flex;
-    gap: 1em;
+    gap: 2em;
+}
+
+.nav-menu .links li a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--font-clr);
+    transition: .5s ease;
+}
+
+.nav-menu .links li a:hover{
+    color: var(--bg--fcs--border-color);
+}
+
+
+/*---CV--BUTTON---*/
+
+.cv-button .download-cv-button{
+    padding: 1em;
+    border: 2px solid var(--bg--fcs--border-color);
+    border-radius: 10px;
+    color: var(--font-clr);
+    width: 150px;
+    cursor: pointer;
+    background: transparent;
 }
 
 /* MAIN--CONTENT---STYLE*/
+/*Hero--Background--*/
+.hero-section{
+    background: url(./reference\ images/home.jpeg);
+    background-position: center;
+}
 /* Hero--Section--Headings */
 .hero-section-headings{
     line-height: 1.3;
@@ -112,6 +165,9 @@ body{
 }
 
 .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     max-width: 30%;
     padding: 1em;
     border: 1px solid #303030;
@@ -133,7 +189,7 @@ body{
 .section-description{
     text-align: center;
     font-size: 1.4rem;
-    margin-top: .8em;
+    margin: .8em auto;
 }
 
 ul li{
