@@ -5,21 +5,7 @@
 }
 
 :root{
-    /*FONT---COLOR*/
-    --font-clr:#e4dbdb;;
 
-    /* BACKGROUND-COLOR */
-    --bg-clr: #010917;
-
-    /* BACKGROUND--GLASS-EFFECT */
-        --bg-glss--background: #0a193c66;
-        --bg-glss--backdrop-filter: blur(10px);
-        --bg--glss--border: 1px solid #ffffff14;
-        --bg-glss--box-shadow: 0 0 30px #008cff26;
-
-        /* INPUT-FOCUS-EFFECT */
-        --bg--fcs--border-color: #3b82f6;
-        --bg--fcs--box-shadow: 0 0 10px #3b82f680;
 }
 
 body{
@@ -37,21 +23,19 @@ html{
     text-align: center;
 }
 
-/*---Quotes---*/
-
-.quote{
-    font-size: clamp(1rem, 2vw, 2.4rem);
-    margin: 2em auto;
-    max-width: 23ch;
+/*--Home--Icon--*/
+#home_icon{
+    margin-top: auto;
 }
 
 
+
 /* HERO---SIZE--STYLE */
-.hero-section, #about_section, .contact-section, #education_section{
+#home_section, #about_section, .contact-section, #education_section{
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 2em;
 }
 
@@ -84,12 +68,6 @@ html{
 .nav-menu .links li a{
     display: inline-block;
     text-decoration: none;
-    color: var(--font-clr);
-    transition: .5s ease;
-}
-
-.nav-menu .links li a:hover{
-    color: var(--bg--fcs--border-color);
 }
 
 
@@ -97,37 +75,30 @@ html{
 
 .cv-button .download-cv-button{
     padding: 1em;
-    border: 2px solid var(--bg--fcs--border-color);
-    border-radius: 10px;
-    color: var(--font-clr);
     width: 150px;
     cursor: pointer;
     background: transparent;
 }
 
 /* MAIN--CONTENT---STYLE*/
-/*Hero--Background--*/
-.hero-section{
-    background: url(./reference\ images/home.jpeg);
-    background-position: center;
-}
+
 /* Hero--Section--Headings */
 .hero-section-headings{
     line-height: 1.3;
 }
 
 .hero-section-headings h1{
-   font-size: clamp(2rem, 6vw, 4.5rem);
+   font-size: clamp(1.5rem, 4vw, 3rem);
     margin-bottom: 0.3em;
 }
 
 .hero-section-headings h2{
-    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-size: clamp(1rem, 1.8vw, 2.5rem);
     margin-bottom: 0.5em;
 }
 
 .hero-section-headings h3{
-   font-size: clamp(1rem, 2vw, 2.5rem);
+   font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
 /* Hero--Section--Buttons*/
@@ -153,26 +124,32 @@ html{
     padding: .8em;
 }
 
+
+
 /* PROJECTS---SECTION */
 
 /* ABOUT---ME---SECTION */
 .about-section-wrapper{
+min-height: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    padding: 1em;
     gap: 2em;
-    margin-top: 2em;
 }
 
-.card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 30%;
-    padding: 1em;
-    border: 1px solid #303030;
+.about_image img{
     border-radius: 15px;
-    
+}
+
+.about_description{
+    max-width: 60ch;
+    margin: auto 0;
+    padding: 1em;
+}
+
+.about_description h2, h3{
+    margin-bottom: .8em;
 }
 
 
