@@ -5,12 +5,23 @@
 }
 
 :root{
+    --main-bg-clr: #0A192F;
+    --card-bg-clr: #112240;
+    --hvr-bg-clr: #1C2E4A;
 
+    --primary-heading: #CCD6F6;
+    --secondary-text: #8892B0;
+    --subtle-text: #6B7280;
+
+    
+    --icon--links-border: #64FFDA;
 }
 
 body{
+    background-color: var(--main-bg-clr);
     line-height: 1.5;
     font-family: Montserrat;
+    color: var(--subtle-text);
 }
 
 html{
@@ -23,15 +34,8 @@ html{
     text-align: center;
 }
 
-/*--Home--Icon--*/
-#home_icon{
-    margin-top: auto;
-}
-
-
-
 /* HERO---SIZE--STYLE */
-#home_section, #about_section, .contact-section, #education_section{
+#home_section, #about_section, #contact_section, #education_section{
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -43,8 +47,8 @@ html{
 .header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1.5em;
-    background-color: var(--bg-clr);
 }
 
 /*---LOGO---*/
@@ -52,9 +56,9 @@ html{
 .logo .mobile_menu{
     display: none;
 }
+
 .logo strong{
     font-size: 2rem;
-    color: var(--font-clr);
 }
 
 /*---LINKS---*/
@@ -68,6 +72,7 @@ html{
 .nav-menu .links li a{
     display: inline-block;
     text-decoration: none;
+    color: var(--primary-heading);
 }
 
 
@@ -77,6 +82,10 @@ html{
     padding: 1em;
     width: 150px;
     cursor: pointer;
+    border: none;
+    border: 2px solid var(--icon--links-border);
+    border-radius: 10px;
+    color: var(--primary-heading);
     background: transparent;
 }
 
@@ -90,23 +99,33 @@ html{
 .hero-section-headings h1{
    font-size: clamp(1.5rem, 4vw, 3rem);
     margin-bottom: 0.3em;
+    color: var(--primary-heading);
 }
 
 .hero-section-headings h2{
     font-size: clamp(1rem, 1.8vw, 2.5rem);
     margin-bottom: 0.5em;
+    color: var(--secondary-text);
 }
 
 .hero-section-headings h3{
    font-size: clamp(1rem, 1.5vw, 2rem);
+   color: var(--secondary-text);
 }
 
 /* Hero--Section--Buttons*/
+.hero-content-buttons{
+    display: flex;
+    gap: 1em;
+}
 .hero-content-buttons button{
+    width: 150px;
     padding: .8em;
     margin-top: 2em;
-    border: none;
-    border-radius: 5px;
+    border: 2px solid var(--icon--links-border);
+    border-radius: 10px;
+    color: var(--primary-heading);
+    background: transparent;
     font-size: 1rem;
 }
 
@@ -122,6 +141,11 @@ html{
     border: 1px solid #303030;
     border-radius: 50%;
     padding: .8em;
+    transition: .5s ease;
+}
+
+.list_icons .icon:hover{
+    border-color: var(--icon--links-border);
 }
 
 
@@ -130,7 +154,8 @@ html{
 
 /* ABOUT---ME---SECTION */
 .about-section-wrapper{
-min-height: 100%;
+    min-height: 100%;
+    min-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,47 +173,183 @@ min-height: 100%;
     padding: 1em;
 }
 
-.about_description h2, h3{
+.about_description br{
+    display: none;
+}
+
+.about-section-wrapper h2{
+    color: var(--primary-heading);
+}
+
+.about-section-wrapper h3{
+    color: var(--secondary-text);
+}
+
+.about_description h2,
+.about_description h3 {
     margin-bottom: .8em;
 }
 
 
 /* EDUCATION---SECTION*/
 .education-section-wrapper{
+    min-height: 100%;
+    min-width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    padding: 1em;
     gap: 2em;
-    margin-top: 2em;
 }
 
-.section-description{
-    text-align: center;
-    font-size: 1.4rem;
-    margin: .8em auto;
+.education_image{
+    object-fit: cover;
 }
+
+.education_image img{
+    border-radius: 15px;
+}
+
+.education_image .image_mobile{
+    display: none;
+}
+
+.schools_list{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.education_descreption{
+    display: flex;
+    flex-direction: column;
+}
+
+.education_descreption h2{
+    margin-bottom: 1em;
+    color: var(--primary-heading);
+}
+
+.education_descreption h3{
+    color: var(--secondary-text);
+}
+
+.education_descreption p{
+    margin-bottom: .8em;
+    color: var(--secondary-text);
+}
+
+.education-section-wrapper article{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    padding: 1em;
+}
+
+.education_icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
 
 ul li{
     list-style: none;
 }
 
 /* CONTACT--SECTION */
+.contact_section_wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+/*--Contact--Details--*/
+
+.my_details{
+    border: 1px solid var(--card-bg-clr);
+    border-radius: 10px;
+    min-width: 50%;
+    padding: 1.5em;
+}
+
+.my_details h2{
+    color: var(--primary-heading);
+}
+
+.my_details p{
+    max-width: 60ch;
+    margin-top: .8em;
+}
+
+.my_details .connect{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.my_details 
+.email,
+.phone,
+.location
+{
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+}
+
+.my_details aside i{
+    display: flex;
+    justify-content: center;
+}
+
+.my_details aside h4{
+    color: var(--primary-heading);
+}
+
+/*--Form--*/
+
 form{
+    min-height: 100%;
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
     padding: 1em;
-    min-width: 30%;
-    border: 1px solid #303030;
-    margin-top: 1.5em;
+    gap: 1em;
+    border: 1px solid var(--card-bg-clr);
+    border-radius: 10px;
 }
 
-.section-description{
-    max-width: 35ch;
+form h2{
+    color: var(--primary-heading);
 }
 
-input, 
-textarea{
-    width: 100%;
+form 
+input,
+textarea 
+{
+    margin: auto 0;
+    padding: 1em;
+    border: none;
+    border-radius: 10px;
 }
+
+form 
+input,
+textarea ::placeholder{
+    font-family: Montserrat;
+}
+
+form #submit_btn{
+    border-radius: 10px;
+    border: none;
+    padding: 1em;
+    font-size: 1rem;
+    font-family: Montserrat;
+}
+
 
 
 /* FOOTER-SECTION */
@@ -196,6 +357,10 @@ textarea{
     display: flex;
     justify-content: center;
     padding: 1.2em;
+}
+
+footer h4{
+    color: var(--primary-heading);
 }
 
 .aside-content{
@@ -218,6 +383,39 @@ textarea{
     border: 1px solid #303030;
     border-radius: 50%;
     padding: .8em;
+    transition: .5s ease;
+}
+
+.footer-icon-link li:hover{
+    border-color: var(--icon--links-border);
+}
+
+.footer-icon-link li i{
+    transition: .5s ease;
+}
+
+.footer-icon-link li i:hover{
+    color: var(--icon--links-border);
+}
+
+footer .footer-links li a{
+    text-decoration: none;
+    color: var(--primary-heading);
+    transition: .5s ease;
+}
+
+footer .footer-links li a:hover{
+    color: var(--icon--links-border);
+}
+
+footer .contact{
+    padding: 1em;
+    margin-top: .8em;
+    border: 2px solid var(--icon--links-border);
+    border-radius: 10px;
+    color: var(--primary-heading);
+    background: transparent;
+    font-size: 1rem;
 }
 
 .copyright{
@@ -227,49 +425,79 @@ textarea{
 
 /* MOBILE--RESPONIVE--DESIGN */
 @media (max-width: 376px) {
-    /* HEADER-CONTENT */
-    /* Logo--display */
-    .logo strong{
-        display: none;
-    }
-
-    .logo .mobile_menu{
-        display: block;
-    }
-
-    /* Menu--display */
-    .nav-menu .links{
-        display: none;
-    }
-
-    /* CV--button--display */
-    .cv-button .download-cv-button{
-        display: none;
-    }
-
-    /* ABOUT--ME--SECTION */
-    .about-section-wrapper{
-        display: flex;
-        flex-direction: column;
-    }
-    .card{
-        max-width: 100%;
-    }
-
-    /* EDUCATION-SECTION */
-    .education-section-wrapper{
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* FOOTER-CONTENT */
-    .quick-links{
-        display: none;
-    }
-
-    .footer-icon-link li{
-    border: 1px solid #303030;
-    border-radius: 50%;
-    padding: .5em;
+/*---LOGO--*/
+.logo strong{
+    display: none;
 }
+
+.logo .mobile_menu{
+    display: block;
+}
+
+/*---HEADER---*/
+/*--LINK--*/
+.nav-menu .links li a{
+    display: none;
+}
+
+.cv-button .download-cv-button{
+   display: none;
+}
+
+/*---MAIN-SECTION---*/
+/*--ABOUT-SECTION--*/
+.about-section-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.about_description br{
+    display: inline-block;
+}
+
+/*---EDUCATION--SECTION---*/
+.education-section-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.education_image img{
+    display: none;
+}
+
+.education_image .image_mobile{
+    display: block;
+}
+
+.education_descreption{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.education_descreption .school_attendance{
+    display: none;
+}
+
+.schools_list{
+    padding: 0;
+}
+/*---CONTACT-SECTION---*/
+.contact_section_wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+form .name_box {
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
+}
+
+/*--FOOTER--*/
+
+.footer-contact{
+    display: none;
+}
+   
 }
