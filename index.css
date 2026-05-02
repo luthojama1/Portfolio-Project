@@ -5,37 +5,28 @@
 }
 
 :root{
-    --main-bg-clr: #0A192F;
-    --card-bg-clr: #112240;
-    --hvr-bg-clr: #1C2E4A;
+    --Dark-text: #000080; /*Headings*/
 
-    --primary-heading: #CCD6F6;
-    --secondary-text: #8892B0;
-    --subtle-text: #6B7280;
-
-    
-    --icon--links-border: #64FFDA;
 }
 
 body{
-    background-color: var(--main-bg-clr);
     line-height: 1.5;
-    font-family: Montserrat;
-    color: var(--subtle-text);
+    font-family: Montserrat, sans-serif;
 }
 
 html{
+    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
 
-/* h2--Headings--Style */
+/*===H2 HEADINGS===*/
 .heading{
     font-size: clamp(1.5rem, 4vw, 3rem);
     text-align: center;
 }
 
-/* HERO---SIZE--STYLE */
-#home_section, #about_section, #contact_section, #education_section{
+/*===HERO===*/
+#about_section, #contact_section, #education_section{
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -43,15 +34,19 @@ html{
     padding: 2em;
 }
 
-/* HEADER---CONTENT---STLE */
+/*===HOME SECTION===*/
 .header{
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5em;
 }
 
-/*---LOGO---*/
+/*===LOGO===*/
 
 .logo .mobile_menu{
     display: none;
@@ -61,35 +56,80 @@ html{
     font-size: 2rem;
 }
 
-/*---LINKS---*/
+/*===SPAN===*/
+
+span{
+    color: var(--Dark-text);
+}
+
+/*===LINKS===*/
 
 .nav-menu .links{
-    position: relative;
     display: flex;
     gap: 2em;
 }
 
 .nav-menu .links li a{
+    position: relative;
     display: inline-block;
     text-decoration: none;
-    color: var(--primary-heading);
+    font-weight: 600;
+    transition: .4s ease;
+    color: #000;
+}
+
+.nav-menu .links li a::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    transform: scaleX(0);
+    background-color: var(--Dark-text);
+}
+
+.nav-menu .links li a:hover{
+    color: var(--Dark-text);
+    transform: scaleX(1);
+}
+.nav-menu .links li a:hover::after{
+    transform: scaleX(1);
 }
 
 
-/*---CV--BUTTON---*/
+/*===CV BUTTON===*/
 
 .cv-button .download-cv-button{
     padding: 1em;
     width: 150px;
     cursor: pointer;
     border: none;
-    border: 2px solid var(--icon--links-border);
+    border: 2px solid var(--Dark-text);
     border-radius: 10px;
-    color: var(--primary-heading);
     background: transparent;
+    transition: color .3s ease;
+    color: var(--Dark-text);
 }
 
-/* MAIN--CONTENT---STYLE*/
+
+/*===MAIN==CONTENT===*/
+
+/*===HERO SECTION===*/
+
+#home_section{
+    min-height: 100vh;
+    display: flex;
+    padding: 2em;
+    margin-top: 2em;
+    align-items: center;
+    background: url(./reference\ images/background_light.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /* Hero--Section--Headings */
 .hero-section-headings{
@@ -99,18 +139,20 @@ html{
 .hero-section-headings h1{
    font-size: clamp(1.5rem, 4vw, 3rem);
     margin-bottom: 0.3em;
-    color: var(--primary-heading);
 }
 
 .hero-section-headings h2{
     font-size: clamp(1rem, 1.8vw, 2.5rem);
     margin-bottom: 0.5em;
-    color: var(--secondary-text);
+    color: var(--Dark-text);
 }
 
 .hero-section-headings h3{
    font-size: clamp(1rem, 1.5vw, 2rem);
-   color: var(--secondary-text);
+}
+
+.hero-section-headings p{
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
 }
 
 /* Hero--Section--Buttons*/
@@ -122,9 +164,8 @@ html{
     width: 150px;
     padding: .8em;
     margin-top: 2em;
-    border: 2px solid var(--icon--links-border);
+    border: 2px solid #000;
     border-radius: 10px;
-    color: var(--primary-heading);
     background: transparent;
     font-size: 1rem;
 }
@@ -138,21 +179,21 @@ html{
 }
 
 .list_icons .icon{
-    border: 1px solid #303030;
+    border: 1px solid #000;
     border-radius: 50%;
     padding: .8em;
     transition: .5s ease;
 }
 
 .list_icons .icon:hover{
-    border-color: var(--icon--links-border);
+    border-color: var(--Dark-text);
 }
 
 
 
-/* PROJECTS---SECTION */
+/*===PROJECTS SECTION===*/
 
-/* ABOUT---ME---SECTION */
+/*===ABOUT===*/
 .about-section-wrapper{
     min-height: 100%;
     min-width: 100%;
@@ -177,21 +218,17 @@ html{
     display: none;
 }
 
-.about-section-wrapper h2{
-    color: var(--primary-heading);
-}
-
-.about-section-wrapper h3{
-    color: var(--secondary-text);
-}
-
 .about_description h2,
 .about_description h3 {
     margin-bottom: .8em;
 }
 
+.about_description h3{
+    color: var(--Dark-text);
+}
 
-/* EDUCATION---SECTION*/
+
+/*===EDUCATION SECTION==*/
 .education-section-wrapper{
     min-height: 100%;
     min-width: 100%;
@@ -227,16 +264,16 @@ html{
 
 .education_descreption h2{
     margin-bottom: 1em;
-    color: var(--primary-heading);
+    color: #000;
 }
 
 .education_descreption h3{
-    color: var(--secondary-text);
+    color: var(--Dark-text);
 }
 
 .education_descreption p{
     margin-bottom: .8em;
-    color: var(--secondary-text);
+    color: #000;
 }
 
 .education-section-wrapper article{
@@ -246,6 +283,10 @@ html{
     padding: 1em;
 }
 
+.education-section-wrapper article i{
+    color: var(--Dark-text);
+}
+
 .education_icon{
     display: flex;
     flex-direction: row;
@@ -253,12 +294,16 @@ html{
     gap: 1em;
 }
 
+.school_attendance p{
+    color: var(--Dark-text);
+}
+
 
 ul li{
     list-style: none;
 }
 
-/* CONTACT--SECTION */
+/*===CONTACT SECTION===*/
 .contact_section_wrapper{
     display: flex;
     justify-content: center;
@@ -268,14 +313,14 @@ ul li{
 /*--Contact--Details--*/
 
 .my_details{
-    border: 1px solid var(--card-bg-clr);
+    border: 1px solid var(--border);
     border-radius: 10px;
     min-width: 50%;
     padding: 1.5em;
 }
 
 .my_details h2{
-    color: var(--primary-heading);
+    color: #000;
 }
 
 .my_details p{
@@ -303,13 +348,14 @@ ul li{
 .my_details aside i{
     display: flex;
     justify-content: center;
+    color: var(--Dark-text);
 }
 
 .my_details aside h4{
-    color: var(--primary-heading);
+    color: #000;
 }
 
-/*--Form--*/
+/*===FORM===*/
 
 form{
     min-height: 100%;
@@ -318,12 +364,12 @@ form{
     flex-direction: column;
     padding: 1em;
     gap: 1em;
-    border: 1px solid var(--card-bg-clr);
+    border: 1px solid var(--border);
     border-radius: 10px;
 }
 
 form h2{
-    color: var(--primary-heading);
+    color: #000;
 }
 
 form 
@@ -333,13 +379,14 @@ textarea
     margin: auto 0;
     padding: 1em;
     border: none;
+    border: 1px solid #303030;
     border-radius: 10px;
 }
 
 form 
 input,
 textarea ::placeholder{
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
 }
 
 form #submit_btn{
@@ -347,20 +394,15 @@ form #submit_btn{
     border: none;
     padding: 1em;
     font-size: 1rem;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
 }
 
 
 
-/* FOOTER-SECTION */
+/*===FOOTER==*/
 .footer-wrapper{
     display: flex;
     justify-content: center;
-    padding: 1.2em;
-}
-
-footer h4{
-    color: var(--primary-heading);
 }
 
 .aside-content{
@@ -380,14 +422,14 @@ footer h4{
 }
 
 .footer-icon-link li{
-    border: 1px solid #303030;
+    border: 1px solid var(--border);
     border-radius: 50%;
     padding: .8em;
     transition: .5s ease;
 }
 
 .footer-icon-link li:hover{
-    border-color: var(--icon--links-border);
+    border-color: var(--Dark-text);
 }
 
 .footer-icon-link li i{
@@ -395,37 +437,52 @@ footer h4{
 }
 
 .footer-icon-link li i:hover{
-    color: var(--icon--links-border);
+    color: var(--Dark-text)
 }
 
 footer .footer-links li a{
     text-decoration: none;
-    color: var(--primary-heading);
     transition: .5s ease;
+    color: #000;
 }
 
 footer .footer-links li a:hover{
-    color: var(--icon--links-border);
+    color: var(--Dark-text);
 }
 
 footer .contact{
     padding: 1em;
     margin-top: .8em;
-    border: 2px solid var(--icon--links-border);
+    border: 2px solid #000;
     border-radius: 10px;
-    color: var(--primary-heading);
+    color: #000;
     background: transparent;
     font-size: 1rem;
 }
 
+#submit_btn{
+    background-color: var(--Dark-text);
+    color: var(--card-bg);
+}
+
 .copyright{
     text-align: center;
+    color: #fff;
+    background-color: var(--Dark-text);
 }
 
 
 /* MOBILE--RESPONIVE--DESIGN */
 @media (max-width: 376px) {
-/*---LOGO--*/
+/*===HERO SECTION===*/
+#home_section{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+/*===LOGO===*/
 .logo strong{
     display: none;
 }
@@ -434,8 +491,9 @@ footer .contact{
     display: block;
 }
 
-/*---HEADER---*/
-/*--LINK--*/
+/*===HEADER===*/
+
+/*===LINKS===*/
 .nav-menu .links li a{
     display: none;
 }
@@ -444,8 +502,8 @@ footer .contact{
    display: none;
 }
 
-/*---MAIN-SECTION---*/
-/*--ABOUT-SECTION--*/
+/*===MAIN SECTION===*/
+/*===ABOUT SECTION===*/
 .about-section-wrapper{
     display: flex;
     flex-direction: column;
@@ -455,7 +513,7 @@ footer .contact{
     display: inline-block;
 }
 
-/*---EDUCATION--SECTION---*/
+/*===EDUCATION===*/
 .education-section-wrapper{
     display: flex;
     flex-direction: column;
@@ -482,7 +540,7 @@ footer .contact{
 .schools_list{
     padding: 0;
 }
-/*---CONTACT-SECTION---*/
+/*===CONTACT===*/
 .contact_section_wrapper{
     display: flex;
     flex-direction: column;
@@ -494,7 +552,7 @@ form .name_box {
     gap: .8em;
 }
 
-/*--FOOTER--*/
+/*===FOOTER===*/
 
 .footer-contact{
     display: none;
