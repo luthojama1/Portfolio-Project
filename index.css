@@ -73,7 +73,7 @@ span{
     position: relative;
     display: inline-block;
     text-decoration: none;
-    font-weight: 600;
+    font-family: Montserrat, sans-serif;
     transition: .4s ease;
     color: #000;
 }
@@ -102,16 +102,45 @@ span{
 
 /*===CV BUTTON===*/
 
-.cv-button .download-cv-button{
-    padding: 1em;
-    width: 150px;
+.cv-button{
+    position: relative;
+}
+
+.cv-button a{
+    position: relative;
+    display: inline-block;
+    padding: .8em;
+    text-decoration: none;
     cursor: pointer;
-    border: none;
-    border: 2px solid var(--Dark-text);
+    border: 2px solid #000;
+    color: #000;
     border-radius: 10px;
     background: transparent;
-    transition: color .3s ease;
-    color: var(--Dark-text);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.cv-button a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0f51b6;
+    z-index: -1;
+
+    transition: 300ms ease-in-out;
+    transform: scaleX(0);
+}
+
+.cv-button a:hover::before,
+.cv-button a:focus::before{
+    transform: scaleX(1);
+}
+
+.cv-button a:hover{
+    color: #000;
 }
 
 
@@ -130,6 +159,7 @@ span{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 
 /* Hero--Section--Headings */
 .hero-section-headings{
@@ -168,6 +198,11 @@ span{
     border-radius: 10px;
     background: transparent;
     font-size: 1rem;
+}
+
+.hero-content-buttons button a{
+    text-decoration: none;
+    color: #000;
 }
 
 .list_icons{
@@ -409,6 +444,7 @@ form #submit_btn{
     display: flex;
     justify-content: space-between;
     min-width: 100%;
+    padding: 1em;
 }
 
 .footer-description{
