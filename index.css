@@ -5,13 +5,48 @@
 }
 
 :root{
-    --Dark-text: #000080; /*Headings*/
+    /*--BACKGROUND COLOR*/
+    --bg-clr:
+    radial-gradient(
+      circle at top left,
+      rgba(0, 255, 200, 0.65) 0%,
+      rgba(0, 255, 200, 0.28) 18%,
+      rgba(0, 180, 255, 0.12) 32%,
+      transparent 48%
+    ),
 
+    radial-gradient(
+      circle at center,
+      rgba(0, 80, 255, 0.22) 0%,
+      transparent 50%
+    ),
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(140, 0, 255, 0.55) 0%,
+      rgba(140, 0, 255, 0.18) 20%,
+      transparent 42%
+    ),
+
+    linear-gradient(
+      135deg,
+      #021224 0%,
+      #04113a 40%,
+      #020b2d 70%,
+      #000010 100%
+    );
+
+
+    /*TEXT*/
+    --small-text: #F3F4F6;
+    --span-text: linear-gradient(to right, #20E3B2 70%, #0050FF38 10%, #020B2D 20%);
 }
+
 
 body{
     line-height: 1.5;
     font-family: Montserrat, sans-serif;
+    background-image: var(--bg-clr);
 }
 
 html{
@@ -36,7 +71,6 @@ html{
 
 /*===HOME SECTION===*/
 .header{
-    background-color: #fff;
     position: fixed;
     top: 0;
     width: 100%;
@@ -59,7 +93,6 @@ html{
 /*===SPAN===*/
 
 span{
-    color: var(--Dark-text);
 }
 
 /*===LINKS===*/
@@ -75,7 +108,6 @@ span{
     text-decoration: none;
     font-family: Montserrat, sans-serif;
     transition: .4s ease;
-    color: #000;
 }
 
 .nav-menu .links li a::after{
@@ -88,11 +120,11 @@ span{
     border-radius: 5px;
     transition: 0.3s ease;
     transform: scaleX(0);
-    background-color: var(--Dark-text);
+    background-color: var();
 }
 
 .nav-menu .links li a:hover{
-    color: var(--Dark-text);
+    color: var();
     transform: scaleX(1);
 }
 .nav-menu .links li a:hover::after{
@@ -113,7 +145,6 @@ span{
     text-decoration: none;
     cursor: pointer;
     border: 2px solid #000;
-    color: #000;
     border-radius: 10px;
     background: transparent;
     overflow: hidden;
@@ -127,7 +158,6 @@ span{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #0f51b6;
     z-index: -1;
 
     transition: 300ms ease-in-out;
@@ -139,26 +169,23 @@ span{
     transform: scaleX(1);
 }
 
-.cv-button a:hover{
-    color: #000;
-}
 
 
 /*===MAIN==CONTENT===*/
 
 /*===HERO SECTION===*/
-
-#home_section{
+    #home_section{
     min-height: 100vh;
     display: flex;
     padding: 2em;
-    margin-top: 2em;
+    padding-top: 6rem;
     align-items: center;
-    background: url(./reference\ images/background_light.png);
+    background: url(./reference\ images/background.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 
 
 /* Hero--Section--Headings */
@@ -174,7 +201,6 @@ span{
 .hero-section-headings h2{
     font-size: clamp(1rem, 1.8vw, 2.5rem);
     margin-bottom: 0.5em;
-    color: var(--Dark-text);
 }
 
 .hero-section-headings h3{
@@ -202,7 +228,6 @@ span{
 
 .hero-content-buttons button a{
     text-decoration: none;
-    color: #000;
 }
 
 .list_icons{
@@ -221,7 +246,6 @@ span{
 }
 
 .list_icons .icon:hover{
-    border-color: var(--Dark-text);
 }
 
 
@@ -259,7 +283,6 @@ span{
 }
 
 .about_description h3{
-    color: var(--Dark-text);
 }
 
 
@@ -299,16 +322,13 @@ span{
 
 .education_descreption h2{
     margin-bottom: 1em;
-    color: #000;
 }
 
 .education_descreption h3{
-    color: var(--Dark-text);
 }
 
 .education_descreption p{
     margin-bottom: .8em;
-    color: #000;
 }
 
 .education-section-wrapper article{
@@ -319,7 +339,6 @@ span{
 }
 
 .education-section-wrapper article i{
-    color: var(--Dark-text);
 }
 
 .education_icon{
@@ -330,7 +349,6 @@ span{
 }
 
 .school_attendance p{
-    color: var(--Dark-text);
 }
 
 
@@ -355,7 +373,6 @@ ul li{
 }
 
 .my_details h2{
-    color: #000;
 }
 
 .my_details p{
@@ -383,11 +400,9 @@ ul li{
 .my_details aside i{
     display: flex;
     justify-content: center;
-    color: var(--Dark-text);
 }
 
 .my_details aside h4{
-    color: #000;
 }
 
 /*===FORM===*/
@@ -404,7 +419,6 @@ form{
 }
 
 form h2{
-    color: #000;
 }
 
 form 
@@ -465,7 +479,6 @@ form #submit_btn{
 }
 
 .footer-icon-link li:hover{
-    border-color: var(--Dark-text);
 }
 
 .footer-icon-link li i{
@@ -473,17 +486,14 @@ form #submit_btn{
 }
 
 .footer-icon-link li i:hover{
-    color: var(--Dark-text)
 }
 
 footer .footer-links li a{
     text-decoration: none;
     transition: .5s ease;
-    color: #000;
 }
 
 footer .footer-links li a:hover{
-    color: var(--Dark-text);
 }
 
 footer .contact{
@@ -491,20 +501,15 @@ footer .contact{
     margin-top: .8em;
     border: 2px solid #000;
     border-radius: 10px;
-    color: #000;
     background: transparent;
     font-size: 1rem;
 }
 
 #submit_btn{
-    background-color: var(--Dark-text);
-    color: var(--card-bg);
 }
 
 .copyright{
     text-align: center;
-    color: #fff;
-    background-color: var(--Dark-text);
 }
 
 
