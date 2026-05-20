@@ -9,6 +9,7 @@
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
+    <link rel="shortcut icon" href="./reference images/favicon.jpeg" type="image/x-icon">
     <title>Lutho Jama</title>
 </head>
 <body>
@@ -32,10 +33,22 @@
         </nav>
         <!-- CV BUTTON -->
         <div class="cv-button">
-            <a href="./files/Lutho-Jama-CV.pdf" download="Download-my-cv">
-                Download CV<i class="fa-solid fa-download fa-sm"></i>
-            </a>
+            <button id="modal_show">Download CV <i class="fa-solid fa-download fa-sm"></i></button>
         </div>
+        <!-- CV BUTTON MODAL -->
+         <div id="modal_container">
+            <div class="modal_content">
+                <div class="close_btn">
+                    <button id="close_modal_btn"><i class="fa-solid fa-x fa-xl"></i></button>
+                </div>
+                <div class="content">
+                    Please confirm that you would like to download my cv
+                </div>
+                <div class="cv_download_btn">
+                    <a id="cv_btn" href="./files/Lutho_jama_cv.pdf" download="Lutho Jama's CV" >Yes, download</a>
+                </div>
+            </div>
+         </div>
     </header>
 
     <!-- MAIN CONTENT -->
@@ -67,7 +80,7 @@
             </ul>
         </div>
         <div class="div_profile">
-            <img src="./reference images/profile_picture.png" alt="">
+            <img src="./reference_images/profile_picture.png" alt="">
         </div>
        
         </section>
@@ -88,7 +101,7 @@
             <div class="about-section-wrapper">
                 <!-- ABOUT ME CARDS -->
                <div class="about_image">
-                <img src="reference images/about image.jpeg" alt="" srcset="">
+                <img src="reference_images/about image.jpeg" alt="" srcset="">
                </div>
                <div class="about_description">
                 <h2>About Me</h2>
@@ -103,8 +116,8 @@
            <!-- EDUCATION WRAPPER -->
            <div class="education-section-wrapper">
                 <div class="education_image">
-                    <img src="./reference images/education.jpeg" alt="" srcset="">
-                    <img class="image_mobile" src="./reference images/education-mobile.jpeg" alt="" srcset="">
+                    <img src="./reference_images/education.jpeg" alt="" srcset="">
+                    <img class="image_mobile" src="./reference_images/education-mobile.jpeg" alt="" srcset="">
                 </div>
                 <div class="education_descreption">
                     <h2>Education</h2>
@@ -236,5 +249,7 @@
             &copy; 2026 Lutho Jama, All rights reserved
         </p>
      </footer>
+
+     <script type="module" src="index.js"></script>
 </body>
 </html>

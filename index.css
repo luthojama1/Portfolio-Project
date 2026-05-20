@@ -86,6 +86,8 @@ h3{
 }
 
 /*===HOME SECTION===*/
+
+/* ==HEADER== */
 .header{
     position: fixed;
     top: 0;
@@ -158,29 +160,139 @@ span{
 
 /*===CV BUTTON===*/
 
-.cv-button{
-    position: relative;
-}
-
-.cv-button a{
+.cv-button #modal_show{
     padding: .8em;
     text-decoration: none;
     color: var(--border-text-clr);
     cursor: pointer;
     border: 2px solid var(--border-text-clr);
     border-radius: 10px;
-    display: block;
+    background: transparent;
+
     transition: .5s ease;
 }
-.cv-button a:hover{
+.cv-button #modal_show:hover{
     box-shadow: var(--glow-box);
     color: var(--btn-hvr-text);
-    border: none;
     background-color: var(--text-hvr);
     backdrop-filter: blur(10px);
 
 }
 
+/* ===CV MODAL CONTENT=== */
+
+#modal_container{
+    position: fixed;
+    inset: 200px 0 0 1070px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(100%);
+    z-index: 1000;
+    transition: 0.3s ease;
+}
+
+/*===JS MODAL CLASS===*/
+
+#modal_container.open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transition: .8s ease-in-out;
+}
+
+/*===MODAL BOUNCE ANIMATION===*/
+
+@keyframes modalBounce {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    25% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+    40% {
+        transform: scale(0.97);
+    }
+
+    55% {
+        transform: scale(1.03);
+    }
+
+    70% {
+        transform: scale(0.98);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#modal_container.open{
+    animation: modalBounce 0.6s ease forwards;
+}
+
+.modal_content{
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border: 1px solid var(--border-text-clr);
+    border-radius: 10px;
+    padding: 1.2em;
+    text-align: center;
+    background-color: #8a5cf6bb;
+}
+
+
+.modal_content .content{
+    margin-top: 2em;
+    font-weight: 500
+}
+
+#close_modal_btn{
+    width: 100%;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+    transition: .2s ease-in-out;
+    color: var(--border-text-clr);
+}
+
+#close_modal_btn i:hover{
+    color: var(--text-hvr);
+}
+
+.modal_content .cv_download_btn a{
+    display: flex;
+    justify-content: flex-start;
+    width: fit-content;
+    padding: .8em;
+    text-decoration: none;
+    color: var(--border-text-clr);
+    cursor: pointer;
+    border: 2px solid var(--border-text-clr);
+    border-radius: 10px;
+    background: transparent;
+
+    transition: .5s ease;
+}
+
+.modal_content .cv_download_btn a:hover{
+    box-shadow: var(--glow-box);
+    color: var(--btn-hvr-text);
+    background-color: var(--text-hvr);
+}
 
 /*===MAIN==CONTENT===*/
 
@@ -191,7 +303,7 @@ span{
     padding: 2em;
     padding-top: 6rem;
     align-items: center;
-    background: url(./reference\ images/background.png);
+    background: url(./reference_images/background.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -267,7 +379,6 @@ span{
 .hero-content-buttons a:hover{
     box-shadow: var(--glow-box);
     color: var(--btn-hvr-text);
-    border: none;
     background-color: var(--text-hvr);
     backdrop-filter: blur(10px);
 }
