@@ -10,4 +10,9 @@ modal_show.addEventListener("click", ()=> {
 close_modal_btn.addEventListener("click", ()=>{
     modal_container.classList.remove("open")
 });
-}
+
+modal_container.addEventListener("click", (event) => {
+        if (event.target === modal_container) {
+            modal_container.classList.remove("open");
+        }})
+};

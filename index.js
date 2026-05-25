@@ -1,3 +1,9 @@
 import { displayModal } from "./js_files/modal.js";
+import { introductionLoader } from "./js_files/intro_loader.js";
 
-displayModal();
+function portfolioFunctionality(){
+    displayModal()
+    introductionLoader()
+};
+
+portfolioFunctionality();
