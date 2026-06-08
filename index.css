@@ -65,6 +65,29 @@ html{
     scroll-behavior: smooth;
 }
 
+/* ===BOUNCE ANIMATION=== */
+@keyframes bounce {
+    0%{
+        transform: scale(1);
+    }
+
+    30%{
+        transform: scale(0.9);
+    }
+
+    50%{
+        transform: scale(1.1);
+    }
+
+    70%{
+        transform: scale(0.95);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
 /* ===INTRO ANIMATION LOADER=== */
 #intro_animation{
     position: fixed;
@@ -126,7 +149,7 @@ h3{
 
 /*===LOGO===*/
 
-.logo .mobile_menu{
+.logo #mobile_menu{
     display: none;
 }
 
@@ -146,12 +169,12 @@ span{
 
 /*===LINKS===*/
 
-.nav-menu .links{
+#nav_menu .links{
     display: flex;
     gap: 2em;
 }
 
-.nav-menu .links li a{
+#nav_menu .links li a{
     position: relative;
     display: inline-block;
     text-decoration: none;
@@ -161,7 +184,7 @@ span{
     transition: .4s ease;
 }
 
-.nav-menu .links li a::after{
+#nav_menu .links li a::after{
     content: "";
     position: absolute;
     bottom: -5px;
@@ -174,13 +197,15 @@ span{
     background-color: var(--text-hvr);
 }
 
-.nav-menu .links li a:hover{
+#nav_menu .links li a:hover{
     color: var(--text-hvr);
     transform: scaleX(1);
 }
-.nav-menu .links li a:hover::after{
+#nav_menu .links li a:hover::after{
     transform: scaleX(1);
 }
+
+
 
 
 /*===CV BUTTON===*/
@@ -202,6 +227,10 @@ span{
     background-color: var(--text-hvr);
     backdrop-filter: blur(10px);
 
+}
+
+.cv-button #modal_show:active{
+    animation: bounce 0.4s ease;
 }
 
 /* ===CV MODAL CONTENT=== */
@@ -298,13 +327,15 @@ span{
     color: var(--border-text-clr);
 }
 
+
 #close_modal_btn i:hover{
     color: var(--text-hvr);
 }
 
-.modal_content .cv_download_btn a{
+.modal_content .cv_download_btn #cv_btn{
     display: flex;
-    width: fit-content;
+    justify-content: center;
+    width: 100%;
     padding: .8em;
     text-decoration: none;
     color: var(--border-text-clr);
@@ -316,10 +347,16 @@ span{
     transition: .5s ease;
 }
 
-.modal_content .cv_download_btn a:hover{
+.modal_content .cv_download_btn #cv_btn:hover{
     box-shadow: var(--glow-box);
     color: var(--btn-hvr-text);
     background-color: var(--text-hvr);
+}
+
+
+/* Bounce animation when clicked */
+.modal_content .cv_download_btn #cv_btn:active{
+    animation: bounce 0.4s ease;
 }
 
 /*===MAIN==CONTENT===*/
@@ -333,7 +370,7 @@ span{
     padding: 2em;
     padding-top: 6rem;
     align-items: center;
-    background: url(./reference_images/background_2.jpeg);
+    /*background: url(./reference_images/background.jpeg);*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -584,6 +621,7 @@ ul li{
     color: var(--border-text-clr);
 }
 
+
 /*===FORM===*/
 
 form{
@@ -646,6 +684,9 @@ form #submit_btn:hover{
     color: var(--btn-hvr-text);
 }
 
+form #submit_btn:active{
+    animation: bounce 0.4s ease;
+}
 
 /*===FOOTER==*/
 .footer-wrapper{
@@ -703,94 +744,84 @@ footer .footer-links li a:hover{
 
 
 /* MOBILE--RESPONIVE--DESIGN */
-@media (max-width: 376px) {
-/*===HERO SECTION===*/
-#home_section{
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    background: none;
-}
+@media screen and (max-width: 480px){
 
-/*===LOGO===*/
-.logo strong{
-    display: none;
-}
+    html,
+    body{
+        overflow-x: hidden;
+    }
 
-.logo .mobile_menu{
-    display: block;
-}
+    #home_section{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
 
-/*===HEADER===*/
+    .header{
+        position: relative;
+    }
 
-.header{
-    backdrop-filter: blur(0);
-}
+    .logo strong{
+        display: none;
+    }
 
-/*===LINKS===*/
-.nav-menu .links li a{
-    display: none;
-}
+    .logo #mobile_menu{
+        display: block;
+    }
 
-.cv-button a{
-   display: none;
-}
+    #nav_menu{
+        display: none;
+    }
+    
+    #nav_menu ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 9999;
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--border-text-clr);
+    }
 
-/*===MAIN SECTION===*/
-/*===ABOUT SECTION===*/
-.about-section-wrapper{
-    display: flex;
-    flex-direction: column;
-}
 
-.about_description br{
-    display: inline-block;
-}
+    .cv-button #modal_show{
+        display: none;
+    }
 
-/*===EDUCATION===*/
-.education-section-wrapper{
-    display: flex;
-    flex-direction: column;
-}
+    .about-section-wrapper,
+    .education-section-wrapper,
+    .contact_section_wrapper{
+        flex-direction: column;
+        gap: 2rem;
+    }
 
-.education_image img{
-    display: none;
-}
+    .education_image img{
+        display: none;
+    }
 
-.education_image .image_mobile{
-    display: block;
-}
+    .education_image .image_mobile{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 
-.education_descreption{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    form .name_box{
+        flex-direction: column;
+        gap: .8rem;
+    }
 
-.education_descreption .school_attendance{
-    display: none;
-}
+    form input,
+    form textarea{
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-.schools_list{
-    padding: 0;
-}
-/*===CONTACT===*/
-.contact_section_wrapper{
-    display: flex;
-    flex-direction: column;
-}
-
-form .name_box {
-    display: flex;
-    flex-direction: column;
-    gap: .8em;
-}
-
-/*===FOOTER===*/
-
-.footer-contact{
-    display: none;
-}
-   
+    .footer-contact{
+        display: none;
+    }
 }

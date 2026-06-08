@@ -14,19 +14,34 @@ export function formValidation(){
         const subject = subjectInput.value.trim();
         const text = textArea.value.trim();
 
+        let params = {
+            name : name,
+            email : email,
+            subject : subject,
+            message : text
+        }
+
+        
+
         if(name === "" || email === "" || subject === "" || text === ""){
             errorMessage.textContent = "Please fill in all required fields. 😮‍💨";
+            errorMessage.style.color = "Red";
             
             return;
         }
 
         if (!email.includes("@")){
             errorMessage.textContent = "Please enter a valid email. 🚶🏽";
+            errorMessage.style.color = "Red";
 
             return;
         }
 
-        errorMessage.textContent = "Form sent successfully, Thank you 😉";
+
+        emailjs.send("service_chr2y6c", "template_vhnuxje", params);
+
+        errorMessage.textContent = "Message sent successfully, Thank you 😉";
+        errorMessage.style.color = "Green";
 
         form.reset();
     })

@@ -9,6 +9,16 @@
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+                emailjs.init({
+                    publicKey: "6YtvUGmJHcfgSVA3t",
+                });
+            })();
+    </script>
     <link rel="shortcut icon" href="./reference images/favicon.jpeg" type="image/x-icon">
     <title>Lutho Jama</title>
 </head>
@@ -17,14 +27,16 @@
     <!-- HEADER CONTENT-->
     <header class="header">
         <div class="logo">
-            <a href="#" class="mobile_menu"><i class="fa-solid fa-bars fa-2xl"></i></a>
+            <a href="#" id="mobile_menu"><i class="fa-solid fa-bars fa-2xl"></i></a>
             <strong>Lutho_<span>Jama</span></strong>
         </div>
         <!-- NAVIGATION LINKS -->
-        <nav class="nav-menu">
+        <nav id="nav_menu">
             <ul class="links">
+            <li id="close_btn"><a href="#"><i class="fa-solid fa-x fa-xl"></i></a></li>
             <li><a href="#">Home</a></li>
             <li><a href="#">Projects</a></li>
+            <li><a href="#">Certificates</a></li>
             <li><a href="#about_section">About</a></li>
             <li><a href="#education_section">Education</a></li>
             <li><a href="#contact_section">Contact</a></li>
@@ -189,7 +201,7 @@
                     <input id="emailInput" placeholder="Enter Your Email">
                 </div>
                 <input id="subjectInput" type="text" placeholder="Subject">
-                <textarea id="textArea" placeholder="Write Something"></textarea>
+                <textarea id="textArea" placeholder="Message"></textarea>
                 <p id="errorMessage"></p>
                 <button id="submit_btn" type="submit">Send</button>
             </form>
