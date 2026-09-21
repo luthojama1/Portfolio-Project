@@ -100,7 +100,7 @@ h3{
 }
 
 /*===HERO===*/
-#about_section, #contact_section, #education_section{
+#about_section, #contact_section, #education_section, #projects_section{
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -452,6 +452,48 @@ span{
 
 
 /*===PROJECTS SECTION===*/
+
+#projects_section{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.projects_grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: space-between;
+}
+
+.project_image{
+    overflow: hidden;
+}
+
+.project_image img{
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project_data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.project_tools{
+    display: flex;
+    gap: 1em;
+}
+
+.project_tools li{
+    list-style: none;
+    padding: .8em;
+    border: 2px solid var(--border-text-clr);
+    border-radius: 10px;
+    background: transparent;
+    color: var(--border-text-clr);
+}
 
 /*===ABOUT===*/
 .about-section-wrapper{
