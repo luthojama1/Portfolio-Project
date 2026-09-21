@@ -5,7 +5,6 @@ import { sideBarMenu } from "./js_files/hamburger_menu.js";
 
 function portfolioFunctionality(){
     displayModal();
-    introductionLoader();
     formValidation();
     sideBarMenu();
 };
