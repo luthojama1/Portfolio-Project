@@ -1,159 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Front-end developer portfolio of Lutho Jama. Building responsive and modern web applications.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="./reference_images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="index.css">
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
-        <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-    (function(){
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Front-end developer portfolio of Lutho Jama. Building responsive and modern web applications." name="description"/>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <link href="./reference_images/favicon.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="index.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   (function(){
                 emailjs.init({
                     publicKey: "6YtvUGmJHcfgSVA3t",
                 });
             })();
-    </script>
-    <link rel="shortcut icon" href="./reference images/favicon.jpeg" type="image/x-icon">
-    <title>Lutho Jama</title>
-</head>
-<body>
-
-    <!-- HEADER CONTENT-->
-    <header class="header">
-        <div class="logo">
-            <a href="#" id="mobile_menu"><i class="fa-solid fa-bars fa-2xl"></i></a>
-            <strong>Lutho_<span>Jama</span></strong>
-        </div>
-        <!-- NAVIGATION LINKS -->
-        <nav id="nav_menu">
-            <ul class="links">
-            <li id="close_btn"><a href="#"><i class="fa-solid fa-x fa-xl"></i></a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#projects_section">Projects</a></li>
-            <li><a href="#">Certificates</a></li>
-            <li><a href="#about_section">About</a></li>
-            <li><a href="#education_section">Education</a></li>
-            <li><a href="#contact_section">Contact</a></li>
-            <span></span>
-            </ul>
-        </nav>
-        <!-- CV BUTTON -->
-        <div class="cv-button">
-            <button id="modal_show">Download CV <i class="fa-solid fa-download fa-sm"></i></button>
-        </div>
-        
-    </header>
-
-    <!-- MAIN CONTENT -->
-     <!-- MAIN CONTENT HERO SECTION-->
-     <main>
-         <section id="home_section">
-             <!-- HERO WRAPPER -->
-        <div class="hero-content-wrapper">
-            <!-- HERO HEADINGS -->
-            <div class="hero-section-headings">
-            <h1>Hi, I'm <span>Lutho Jama.</span></h1>
-            <h2>Front-End Developer</h2>
-            <p>I build clean, responsive, and user-focused web applications using modern front-end technologies.
-            <br>Looking foward to working together.
-            </p>
-        </div>
-        <!-- HERO BUTTONS -->
-        <div class="hero-content-buttons">
-            <button class="view-projects-btn">View Projects</button>
-            <a class="contact-btn" href="#contact_section">Contact</a>
-        </div>
-        <!-- HERO ICONS-->
-        <ul class="list_icons">
-                <li class="icon"><i class="fa-brands fa-html5 fa-1xl" style="color: rgb(227, 79, 38);"></i></li>
-                <li class="icon"><i class="fa-brands fa-css3-alt fa-1xl" style="color: rgb(21, 114, 182);"></i></li>
-                <li class="icon"><i class="fa-brands fa-tailwind-css fa-1xl" style="color: rgb(56, 189, 248);"></i></li>
-                <li class="icon"><i class="fa-brands fa-js fa-1xl" style="color: rgb(247, 223, 30);"></i></li>
-                <li class="icon"><i class="fa-brands fa-react fa-1xl" style="color: rgb(97, 218, 251);"></i></li>
-            </ul>
-        </div>
-        <!-- <div class="div_profile">
+  </script>
+  <title>
+   Lutho Jama
+  </title>
+ </head>
+ <body>
+  <!-- HEADER CONTENT-->
+  <header class="header">
+   <div class="logo">
+    <a href="#" id="mobile_menu">
+     <i class="fa-solid fa-bars fa-2xl">
+     </i>
+    </a>
+    <strong>
+     Lutho_
+     <span>
+      Jama
+     </span>
+    </strong>
+   </div>
+   <!-- NAVIGATION LINKS -->
+   <nav id="nav_menu" aria-label="Primary navigation">
+    <ul class="links">
+     <li id="close_btn">
+      <a href="#">
+       <i class="fa-solid fa-x fa-xl">
+       </i>
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Home
+      </a>
+     </li>
+     <li>
+      <a href="#projects_section">
+       Projects
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Certificates
+      </a>
+     </li>
+     <li>
+      <a href="#about_section">
+       About
+      </a>
+     </li>
+     <li>
+      <a href="#education_section">
+       Education
+      </a>
+     </li>
+     <li>
+      <a href="#contact_section">
+       Contact
+      </a>
+     </li>
+     <li aria-hidden="true" class="nav-indicator">
+      <span>
+      </span>
+     </li>
+    </ul>
+   </nav>
+   <!-- CV BUTTON -->
+   <div class="cv-button">
+    <button id="modal_show">
+     Download CV
+     <i class="fa-solid fa-download fa-sm">
+     </i>
+    </button>
+   </div>
+  </header>
+  <!-- MAIN CONTENT -->
+  <!-- MAIN CONTENT HERO SECTION-->
+  <main>
+   <section id="home_section">
+    <!-- HERO WRAPPER -->
+    <div class="hero-content-wrapper">
+     <!-- HERO HEADINGS -->
+     <div class="hero-section-headings">
+      <h1>
+       Hi, I'm
+       <span>
+        Lutho Jama.
+       </span>
+      </h1>
+      <h2>
+       Front-End Developer
+      </h2>
+      <p>
+       I build clean, responsive, and user-focused web applications using modern front-end technologies.
+       <br/>
+       Looking forward to working together.
+      </p>
+     </div>
+     <!-- HERO BUTTONS -->
+     <div class="hero-content-buttons">
+      <button class="view-projects-btn">
+       View Projects
+      </button>
+      <a class="contact-btn" href="#contact_section">
+       Contact
+      </a>
+     </div>
+     <!-- HERO ICONS-->
+     <ul class="list_icons">
+      <li class="icon">
+       <i class="fa-brands fa-html5 fa-1xl" style="color: rgb(227, 79, 38);">
+       </i>
+      </li>
+      <li class="icon">
+       <i class="fa-brands fa-css3-alt fa-1xl" style="color: rgb(21, 114, 182);">
+       </i>
+      </li>
+      <li class="icon">
+       <svg class="tailwind-icon" viewBox="0 0 48 48" aria-label="Tailwind CSS" role="img">
+        <path d="M24 10c-6.4 0-10.7 3.2-12.8 9.6 3.2-3.2 7-4.4 11.2-3.6 2.3.4 4 1.7 5.8 3.5 2.8 2.8 6 6.1 12.8 6.1 6.4 0 10.7-3.2 12.8-9.6-3.2 3.2-7 4.4-11.2 3.6-2.3-.4-4-1.7-5.8-3.5C34 13.3 30.8 10 24 10Zm-12.8 14.4C7 27.6 2.7 30.8.6 37.2c3.2-3.2 7-4.4 11.2-3.6 2.3.4 4 1.7 5.8 3.5 2.8 2.8 6 6.1 12.8 6.1 6.4 0 10.7-3.2 12.8-9.6-3.2 3.2-7 4.4-11.2 3.6-2.3-.4-4-1.7-5.8-3.5-2.8-2.8-6-6.1-12.8-6.1Z" fill="currentColor"/>
+       </svg>
+      </li>
+      <li class="icon">
+       <i class="fa-brands fa-js fa-1xl" style="color: rgb(247, 223, 30);">
+       </i>
+      </li>
+      <li class="icon">
+       <i class="fa-brands fa-react fa-1xl" style="color: rgb(97, 218, 251);">
+       </i>
+      </li>
+     </ul>
+    </div>
+    <!-- <div class="div_profile">
             <img src="./reference_images/profile_picture.png" alt="">
         </div>-->
-       
-        </section>
-        <!-- PROJECTS SECTION -->
-        <section id="projects_section">
-            <h2>Projects</h2>
-            <h3>Featured Projects</h3>
-            <p>A selection of my recent work. Each project is crafted with focus on performance, clean code and greate UX.</p>
-            <div class="projects_grid">
-                <!-- Project 1 -->
-                <div class="grid_container">
-                    <div class="project_image">
-                        <img src="./project_images/portfolio_project.png" alt="">
-                    </div>
-                    <div class="project_data">
-                        <h3>Portfolio Project</h3>
-                        <p class="project_description">This portfolio project showcases my skills, creativity, and growth as a developer through a collection of practical, responsive, and thoughtfully designed web projects.</p>
-                        <div class="project_tools">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <div class="project_demo">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 2 -->
-                  <div class="grid_container">
-                    <div class="project_image">
-                        <img src="" alt="">
-                    </div>
-                    <div class="project_data">
-                        <h3>E-Commerse Store</h3>
-                        <p class="project_description">CozyWear is a modern e-commerce store focused on comfortable, stylish, and affordable clothing. The project features a clean, responsive interface where users can browse products, view details, and add items to their cart.</p>
-                        <div class="project_tools">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <div class="project_demo">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                 <div class="grid_container">
-                    <div class="project_image">
-                        <img src="" alt="">
-                    </div>
-                    <div class="project_data">
-                        <h3>Kanban Task Manager</h3>
-                        <p class="project_description">A project management app that organizes tasks into visual columns like To Do, In Progress, and Completed so users can easily track and manage their workflow.</p>
-                        <div class="project_tools">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <div class="project_demo">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 4 -->
-             <!-- <div class="grid_container">
+   </section>
+   <!-- PROJECTS SECTION -->
+   <section id="projects_section">
+    <h2>
+     Projects
+    </h2>
+    <p>
+     A selection of my recent work. Each project is crafted with
+     <br/>
+     focus on performance, clean code and great UX.
+    </p>
+    <div class="projects_grid">
+     <!-- Project 1 -->
+     <div class="grid_container">
+      <div class="project_image">
+       <a href="#">
+        <img src="" alt="">
+       </a>
+      </div>
+      <div class="project_data">
+       <h3>
+        Portfolio Project
+       </h3>
+       <p class="project_description">
+        This portfolio project showcases my skills, creativity, and growth as a developer through a collection of practical, responsive, and thoughtfully designed web projects.
+       </p>
+       <ul class="project_tools">
+        <li>
+         HTML
+        </li>
+        <li>
+         CSS
+        </li>
+        <li>
+         JavaScript
+        </li>
+       </ul>
+       <div class="project_demo">
+        <a class="demo_data" href="#">
+         <i class="fa-solid fa-circle fa-2xs" style="color: rgb(193, 6, 6);">
+         </i>
+         Live Demo
+        </a>
+        <a class="demo_data" href="#">
+         <i class="fa-brands fa-github fa-xl" style="color: rgb(26, 26, 26);">
+         </i>
+         View Code
+        </a>
+       </div>
+      </div>
+     </div>
+     <!-- Project 2 -->
+     <div class="grid_container">
+      <div class="project_image">
+       <a href="#">
+        <img src="" alt="">
+       </a>
+      </div>
+      <div class="project_data">
+       <h3>
+        E-Commerce Store
+       </h3>
+       <p class="project_description">
+        CozyWear is a modern e-commerce store focused on comfortable, stylish, and affordable clothing. The project features a clean, responsive interface where users can browse products, view details, and add items to their cart.
+       </p>
+       <ul class="project_tools">
+        <li>
+         HTML
+        </li>
+        <li>
+         CSS
+        </li>
+        <li>
+         JavaScript
+        </li>
+       </ul>
+       <div class="project_demo">
+        <a class="demo_data" href="#">
+         <i class="fa-solid fa-circle fa-2xs" style="color: rgb(193, 6, 6);">
+         </i>
+         Live Demo
+        </a>
+        <a class="demo_data" href="#">
+         <i class="fa-brands fa-github fa-xl" style="color: rgb(26, 26, 26);">
+         </i>
+         View Code
+        </a>
+       </div>
+      </div>
+     </div>
+     <!-- Project 3 -->
+     <div class="grid_container">
+      <div class="project_image">
+       <a href="#">
+        <img src="" alt="">
+       </a>
+      </div>
+      <div class="project_data">
+       <h3>
+        Kanban Task Manager
+       </h3>
+       <p class="project_description">
+        A project management app that organizes tasks into visual columns like To Do, In Progress, and Completed so users can easily track and manage their workflow.
+       </p>
+       <ul class="project_tools">
+        <li>
+         HTML
+        </li>
+        <li>
+         CSS
+        </li>
+        <li>
+         JavaScript
+        </li>
+       </ul>
+       <div class="project_demo">
+        <a class="demo_data" href="#">
+         <i class="fa-solid fa-circle fa-2xs" style="color: rgb(193, 6, 6);">
+         </i>
+         Live Demo
+        </a>
+        <a class="demo_data" href="#">
+         <i class="fa-brands fa-github fa-xl" style="color: rgb(26, 26, 26);">
+         </i>
+         View Code
+        </a>
+       </div>
+      </div>
+      <!-- Project 4 -->
+      <!-- <div class="grid_container">
                     <img src="" alt="">
                     <div class="project_data">
                         <h3>Podcast App</h3>
                         <p class="project_description">A modern podcast app designed to make discovering, exploring, and listening to your favorite podcasts simple and enjoyable.</p>
-                        <div class="project_tools">
+                        <ul class="project_tools">
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>React</li>
-                            <hr>
+                        </ul>
+                        <hr>
                             <div class="project_demo">
                                 
                             </div>
@@ -161,185 +299,302 @@
                     </div>
                 </div>
                 </div> -->
-            </div>
-        </section>
-
-        <!-- ABOUT ME -->
-        <section id="about_section">
-            <!-- ABOUT ME WRAPPER -->
-            <div class="about-section-wrapper">
-                <!-- ABOUT ME CARDS -->
-               <div class="about_image">
-                <img src="reference_images/about_2.jpeg" alt="" srcset="">
-                <img class="image_mobile" src="./reference_images/about_2 - mobile.jpeg" alt="" srcset="">
-               </div>
-               <div class="about_description">
-                <h2>About Me</h2>
-                <h3>A dadicated front-end developer based in Western Cape</h3>
-                <p>I spent a year building a strong foundation at Rosebank College, followed by an intensive year at the CodeSpace Academy bootcamp, where I sharpened my skills in HTML, CSS, and JavaScript—tools I now use to bring ideas to life through clean, functional development; driven by curiosity and growth.
-                    <br><br> I’m eager to expand into backend technologies and believe that continuously evolving as a programmer isn’t optional—it’s essential in shaping impactful, future-ready solutions.</p>
-               </div>
-            </div>
-        </section>
-        <!-- EDUCATION  -->
-        <section id="education_section">
-           <!-- EDUCATION WRAPPER -->
-           <div class="education-section-wrapper">
-                <div class="education_image">
-                    <img src="./reference_images/education.jpeg" alt="" srcset="">
-                    <img class="image_mobile" src="./reference_images/education-mobile.jpeg" alt="" srcset="">
-                </div>
-                <div class="education_descreption">
-                    <h2>Education</h2>
-                    <h3>My Education Journey</h3>
-                    <p>A foundation built on curiosity, dedication and a passion for learning</p>
-                    <div class="schools_list">
-                         <article class="mountainView"> <!--3-->
-                    <div class="education_icon">
-                        <i class="fa-solid fa-building-columns fa-2xl "></i>
-                        <ul>
-                            <li><b>CodeSpace Academy</b></li>
-                            <li>Certificate in Front-End Development</li>
-                        </ul>
-                    </div>
-                    <div class="school_attendance">
-                        <p>2025-2026</p>
-                    </div>
-                </article>  
-                <article class="Rosebank">
-                    <div class="education_icon">
-                        <i class="fa-solid fa-building-columns fa-2xl"></i>
-                        <ul>
-                            <li><b>Rosebank College</b></li>
-                            <li>Certificate in Mobile Application and Web Development</li>
-                        </ul>
-                    </div>
-                    <div class="school_attendance">
-                        <p>2022-2023</p>
-                    </div>
-                </article>
-                <article class="codeSpace">
-                    <div class="education_icon">
-                        <i class="fa-solid fa-building-columns fa-2xl"></i>
-                        <ul>
-                            <li><b>MountainView High School</b></li>
-                            <li>National Senior Certificate</li>
-                        </ul>
-                    </div>
-                    <div class="school_attendance">
-                        <p>2014-2019</p>
-                    </div>
-                </article>
-                </div>
-                </div>
-            </div>
-        </section>
-        <!-- CONTACT SECTION -->
-        <section id="contact_section">
-            <div class="contact_section_wrapper">
-                <div class="my_details">
-                    <h2>Contact Information</h2>
-                    <p>Feel free to reach out if you want to collaborate, ask me something, or just want to say Hi👋🏽</p>
-                    <div class="connect">
-                        <aside class="email">
-                            <i class="fa-solid fa-envelope fa-2xl"></i>
-                            <div class="email_box">
-                                <h4>Email</h4>
-                                <p>luthojama1@gmail.com</p>
-                            </div>
-                        </aside>
-                        <aside class="phone">
-                            <i class="fa-solid fa-phone fa-2xl"></i>
-                            <div class="phone_box">
-                                <h4>Phone</h4>
-                                <p>075-225-4859</p>
-                            </div>
-                        </aside>
-                        <aside class="location">
-                            <i class="fa-solid fa-location-dot fa-2xl"></i>
-                            <div class="location_box">
-                                <h4>Location</h4>
-                                <p>18 Mzoxolo Cres. Cape-Town</p>
-                            </div>
-                        </aside>
-                    </div>
-                </div>
-                <div class="contact_box">
-                    <form id="form">
-                <h2>Let's Connect</h2>
-                <div class="name_box">
-                    <input id="nameInput" type="text" placeholder="Enter Your Name">
-                    <input id="emailInput" placeholder="Enter Your Email">
-                </div>
-                <input id="subjectInput" type="text" placeholder="Subject">
+     </div>
+    </div>
+   </section>
+   <!-- ABOUT ME -->
+   <section id="about_section">
+    <!-- ABOUT ME WRAPPER -->
+    <div class="about-section-wrapper">
+     <!-- ABOUT ME CARDS -->
+     <div class="about_image">
+      <img alt="Portrait of Lutho Jama" src="./reference_images/about_2.jpeg"/>
+      <img alt="Portrait of Lutho Jama" class="image_mobile" src="./reference_images/about_2 - mobile.jpeg"/>
+     </div>
+     <div class="about_description">
+      <h2>
+       About Me
+      </h2>
+      <h3>
+       A dedicated front-end developer based in Western Cape
+      </h3>
+      <p>
+       I spent a year building a strong foundation at Rosebank College, followed by an intensive year at the CodeSpace Academy bootcamp, where I sharpened my skills in HTML, CSS, and JavaScript&mdash;tools I now use to bring ideas to life through clean, functional development; driven by curiosity and growth.
+       <br/>
+       <br/>
+       I&rsquo;m eager to expand into backend technologies and believe that continuously evolving as a programmer isn&rsquo;t optional&mdash;it&rsquo;s essential in shaping impactful, future-ready solutions.
+      </p>
+     </div>
+    </div>
+   </section>
+   <!-- EDUCATION  -->
+   <section id="education_section">
+    <!-- EDUCATION WRAPPER -->
+    <div class="education-section-wrapper">
+     <div class="education_image">
+      <img alt="Education section illustration" src="./reference_images/education.jpeg"/>
+      <img alt="Education section illustration" class="image_mobile" src="./reference_images/education-mobile.jpeg"/>
+     </div>
+     <div class="education_descreption">
+      <h2>
+       Education
+      </h2>
+      <h3>
+       My Education Journey
+      </h3>
+      <p>
+       A foundation built on curiosity, dedication and a passion for learning
+      </p>
+      <div class="schools_list">
+       <article class="mountainView">
+        <!--3-->
+        <div class="education_icon">
+         <i class="fa-solid fa-building-columns fa-2xl">
+         </i>
+         <ul>
+          <li>
+           <b>
+            CodeSpace Academy
+           </b>
+          </li>
+          <li>
+           Certificate in Front-End Development
+          </li>
+         </ul>
+        </div>
+        <div class="school_attendance">
+         <p>
+          2025-2026
+         </p>
+        </div>
+       </article>
+       <article class="Rosebank">
+        <div class="education_icon">
+         <i class="fa-solid fa-building-columns fa-2xl">
+         </i>
+         <ul>
+          <li>
+           <b>
+            Rosebank College
+           </b>
+          </li>
+          <li>
+           Certificate in Mobile Application and Web Development
+          </li>
+         </ul>
+        </div>
+        <div class="school_attendance">
+         <p>
+          2022-2023
+         </p>
+        </div>
+       </article>
+       <article class="codeSpace">
+        <div class="education_icon">
+         <i class="fa-solid fa-building-columns fa-2xl">
+         </i>
+         <ul>
+          <li>
+           <b>
+            MountainView High School
+           </b>
+          </li>
+          <li>
+           National Senior Certificate
+          </li>
+         </ul>
+        </div>
+        <div class="school_attendance">
+         <p>
+          2014-2019
+         </p>
+        </div>
+       </article>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- CONTACT SECTION -->
+   <section id="contact_section">
+    <div class="contact_section_wrapper">
+     <div class="my_details">
+      <h2>
+       Contact Information
+      </h2>
+      <p>
+       Feel free to reach out if you want to collaborate, ask me something, or just want to say Hi👋🏽
+      </p>
+      <div class="connect">
+       <aside class="email">
+        <i class="fa-solid fa-envelope fa-2xl">
+        </i>
+        <div class="email_box">
+         <h4>
+          Email
+         </h4>
+         <p>
+          luthojama1@gmail.com
+         </p>
+        </div>
+       </aside>
+       <aside class="phone">
+        <i class="fa-solid fa-phone fa-2xl">
+        </i>
+        <div class="phone_box">
+         <h4>
+          Phone
+         </h4>
+         <p>
+          075-225-4859
+         </p>
+        </div>
+       </aside>
+       <aside class="location">
+        <i class="fa-solid fa-location-dot fa-2xl">
+        </i>
+        <div class="location_box">
+         <h4>
+          Location
+         </h4>
+         <p>
+          18 Mzoxolo Cres. Cape-Town
+         </p>
+        </div>
+       </aside>
+      </div>
+     </div>
+     <div class="contact_box">
+      <form id="form">
+       <h2>
+        Let's Connect
+       </h2>
+       <div class="name_box">
+        <input id="nameInput" placeholder="Enter Your Name" type="text"/>
+        <input id="emailInput" placeholder="Enter Your Email" type="email"/>
+       </div>
+       <input id="subjectInput" placeholder="Subject" type="text"/>
+       <label class="sr-only" for="textArea">Message</label>
                 <textarea id="textArea" placeholder="Message"></textarea>
-                <p id="errorMessage"></p>
-                <button id="submit_btn" type="submit">Send</button>
-            </form>
-            </div>
-            </div>
-        </section>
-        <hr>
-     </main>
-     <!-- END---OF---MAIN--SECTION -->
-
-     <!-- FOOTER SECTION -->
-     <footer>
-        <!-- FOOTER WRAPPER -->
-        <div class="footer-wrapper">
-            <div class="aside-content">
-            <aside class="footer-intro-icons">
-                <h4>Lutho <span>Jama</span></h4>
-                <p class="footer-description">
-                    Front-end developer passionate about building modern, responsive, and user-friendly web experiences
-                </p>
-                    <ul class="footer-icon-link">
-                        <li><a href="#"><i class="fa-brands fa-github fa-2xl"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
-                        <li><a href="mailto:luthojama1@gmail.com"><i class="fa-solid fa-envelope fa-2xl"></i></a></li>
-                    </ul>
-            </aside>
-            <aside class="quick-links">
-                <h4>Quick Links</h4>
-                <ul class="footer-links">
-                    <li class="footer_links">> <a href="#home_section">Home</a></li>
-                    <li class="footer_links">> <a href="#">Projects</a></li>
-                    <li class="footer_links">> <a href="#about_section">About</a></li>
-                    <li class="footer_links">> <a href="#education_section">Education</a></li>
-                    <li class="footer_links">> <a href="#contact_section">Contact</a></li>
-                </ul>
-            </aside>
-            <aside class="footer-contact">
-                <h4>Let's Build Together</h4>
-                <p class="footer-description">Have an idea or project in mind? Let's create something amazing together</p>
-            </aside>
-        </div>
-        </div>
-        <hr>
-        <p class="copyright">
-            &copy; 2026 Lutho Jama, All rights reserved
-        </p>
-     </footer>
-     <!-- CV DOWNLOAD MODAL -->
-         <div id="modal_container">
-            <div class="modal_content">
-                <div class="close_btn">
-                    <button id="close_modal_btn"><i class="fa-solid fa-x fa-xl"></i></button>
-                </div>
-                <div class="content">
-                    Please confirm that you would like to download my cv
-                </div>
-                <div class="cv_download_btn">
-                    <a id="cv_btn" href="./files/Lutho_jama_cv.pdf" download="Lutho Jama's CV" >Yes, download</a>
-                </div>
-            </div>
-         </div>
-
-         <!-- LOADING INTRO ANIMATION -->
-          <div id="intro_animation">
-            <h2 id="intro_animation_heading">Hello World!</h2>
-          </div>
-
-     <script type="module" src="index.js"></script>
-</body>
+       <p id="errorMessage">
+       </p>
+       <button id="submit_btn" type="submit">
+        Send
+       </button>
+      </form>
+     </div>
+    </div>
+   </section>
+   <hr/>
+  </main>
+  <!-- END---OF---MAIN--SECTION -->
+  <!-- FOOTER SECTION -->
+  <footer>
+   <!-- FOOTER WRAPPER -->
+   <div class="footer-wrapper">
+    <div class="aside-content">
+     <aside class="footer-intro-icons">
+      <h4>
+       Lutho
+       <span>
+        Jama
+       </span>
+      </h4>
+      <p class="footer-description">
+       Front-end developer passionate about building modern, responsive, and user-friendly web experiences
+      </p>
+      <ul class="footer-icon-link">
+       <li>
+        <a href="https://github.com/luthojama1" aria-label="GitHub">
+         <i class="fa-brands fa-github fa-2xl" aria-hidden="true">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a href="#" aria-label="LinkedIn">
+         <i class="fa-brands fa-linkedin fa-2xl" aria-hidden="true">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a href="mailto:luthojama1@gmail.com" aria-label="Email Lutho">
+         <i class="fa-solid fa-envelope fa-2xl" aria-hidden="true">
+         </i>
+        </a>
+       </li>
+      </ul>
+     </aside>
+     <aside class="quick-links">
+      <h4>
+       Quick Links
+      </h4>
+      <ul class="footer-links">
+       <li class="footer_links">
+        &gt;
+        <a href="#home_section">
+         Home
+        </a>
+       </li>
+       <li class="footer_links">
+        &gt;
+        <a href="#projects_section">
+         Projects
+        </a>
+       </li>
+       <li class="footer_links">
+        &gt;
+        <a href="#about_section">
+         About
+        </a>
+       </li>
+       <li class="footer_links">
+        &gt;
+        <a href="#education_section">
+         Education
+        </a>
+       </li>
+       <li class="footer_links">
+        &gt;
+        <a href="#contact_section">
+         Contact
+        </a>
+       </li>
+      </ul>
+     </aside>
+     <aside class="footer-contact">
+      <h4>
+       Let's Build Together
+      </h4>
+      <p class="footer-description">
+       Have an idea or project in mind? Let's create something amazing together
+      </p>
+     </aside>
+    </div>
+   </div>
+   <hr/>
+   <p class="copyright">
+    &copy; 2027 Lutho Jama, All rights reserved
+   </p>
+  </footer>
+  <!-- CV DOWNLOAD MODAL -->
+  <div id="modal_container" role="dialog" aria-modal="true" aria-labelledby="cv_modal_message">
+   <div class="modal_content">
+    <div class="close_btn">
+     <button id="close_modal_btn">
+      <i class="fa-solid fa-x fa-xl">
+      </i>
+     </button>
+    </div>
+    <div class="content">
+     Please confirm that you would like to download my cv
+    </div>
+    <div class="cv_download_btn">
+     <a download="Lutho Jama's CV" href="./files/Lutho_jama_cv.pdf" id="cv_btn">
+      Yes, download
+     </a>
+    </div>
+   </div>
+  </div>
+  <script src="index.js" type="module">
+  </script>
+ </body>
 </html>
