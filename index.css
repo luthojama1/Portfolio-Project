@@ -392,7 +392,7 @@ h3{
     display: flex;
     gap: 1em;
 }
-.hero-content-buttons button{
+.hero-content-buttons .button{
     width: 150px;
     padding: .8em;
     margin-top: 2em;
@@ -405,7 +405,7 @@ h3{
     transition: .2s ease-in-out;
 }
 
-.hero-content-buttons button:hover{
+.hero-content-buttons .button:hover{
      box-shadow: var(--glow-box);
     color: var(--btn-hvr-text);
     border-color: var(--text-hvr);
@@ -480,14 +480,16 @@ h3{
     flex-direction: column;
     justify-content: space-between;
     padding: 1em;
+    border: 1px solid transparent;
     border-radius: 12px;
     box-shadow: var(--shadow-sm);
-    transition: transform .2s ease, box-shadow .2s ease;
+    transition: all .35s ease;
 }
 
 .grid_container:hover{
     transform: translateY(-3px);
     box-shadow: var(--shadow-md);
+    border: 1px solid var(--text-hvr);
 }
 
 .project_image{
