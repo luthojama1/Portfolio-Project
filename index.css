@@ -136,6 +136,15 @@ h3{
     display: none;
 }
 
+.logo #mobile_menu .fa-solid{
+    color: var(--border-text-clr);
+    transition: .5s ease;
+}
+
+.logo #mobile_menu .fa-solid:hover{
+    color: var(--text-hvr);
+}
+
 .logo strong{
     font-size: 2rem;
 }
@@ -480,6 +489,7 @@ h3{
     flex-direction: column;
     justify-content: space-between;
     padding: 1em;
+    cursor: default;
     border: 1px solid transparent;
     border-radius: 12px;
     box-shadow: var(--shadow-sm);
